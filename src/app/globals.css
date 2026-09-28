@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { background: #fbf7f6; color: #2c1a1d; }
+::selection { background: #d4a3a6; color: #2c1a1d; }
+:focus-visible { outline: 2px solid #7a1c28; outline-offset: 3px; }
+
+/* The almond nail silhouette, reused for imagery */
+.almond { border-radius: 50% 50% 46% 46% / 62% 62% 38% 38%; }
+
+@layer components {
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition duration-200 disabled:opacity-50; }
+  .btn-wine { @apply btn bg-wine text-cream hover:bg-wine-deep active:scale-[.97]; }
+  .btn-ghost { @apply btn border border-wine/30 text-wine hover:border-wine hover:bg-blush; }
+  .field { @apply w-full rounded-2xl border border-rose/60 bg-white px-4 py-3 text-sm outline-none transition focus:border-wine; }
+  .label { @apply mb-1.5 block text-sm font-medium text-espresso/80; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
