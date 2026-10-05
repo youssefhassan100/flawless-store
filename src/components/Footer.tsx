@@ -20,7 +20,10 @@ export function Footer() {
           {SITE.instagram && <li><a href={SITE.instagram} className="hover:underline">Instagram</a></li>}
         </ul>
       </div>
-      <p className="border-t border-cream/15 py-5 text-center text-xs text-cream/70">Owned &amp; Managed by {SITE.owner}</p>
+      <div className="border-t border-cream/15 py-5 text-center text-xs text-cream/70">
+  <p>Owned &amp; Managed by {SITE.owner}</p>
+  <p className="mt-1 text-cream/50">Coded by UCIF.H</p>
+</div>
     </footer>
   );
 }
